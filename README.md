@@ -1,4 +1,4 @@
-#CO2-Emissions-Prediction-Using-Machine-Learning  
+#CO2-Emissions-Prediction-Using-Machine-Learning
 Project Overview
 This LHL capstone project aims to predict CO2 emissions for any location based on geographical coordinates (latitude and longitude) and population data. The increasing global CO2 emissions due to human activities such as deforestation and fossil fuel consumption have motivated the hypothesis that a relationship exists between population metrics and CO2 emissions.
 
@@ -19,7 +19,7 @@ Merged population data with the integrated dataset.
 Exploratory Data Analysis (EDA):
 
 Visualizations in Tableau to explore data features and insights.
-Correlation heatmap to identify key features (latitude showed highest correlation with CO2 emissions).
+A correlation heatmap was used to identify key features (latitude showed the highest correlation with CO2 emissions).
 Modeling:
 
 Built a baseline Linear Regression model (R-squared: 20%).
@@ -27,9 +27,9 @@ Trained and compared multiple models: Decision Tree, Random Forest, and XGBoost.
 XGBoost model achieved the best performance (R-squared: 98%).
 Deployment:
 
-Deployed the model using Flask for local machine use.
+I deployed the model using Flask for local machine use.
 Results
-Insights: Latitude has a higher correlation with CO2 emissions than population density, possibly due to climatic preferences near the equator.
+Insights: Latitude correlates more with CO2 emissions than population density, possibly due to climatic preferences near the equator.
 Model Performance: XGBoost outperformed other models with an R-squared score of 98%, demonstrating the ability to predict CO2 emissions effectively.
 Challenges
 The main challenge was data gathering, as CO2 emissions data is not readily available with population data.
