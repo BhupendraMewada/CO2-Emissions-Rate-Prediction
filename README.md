@@ -1,4 +1,4 @@
-#CO2 Emissions Prediction Using Machine Learning
+#CO2-Emissions-Prediction-Using-Machine-Learning  
 Project Overview
 This LHL capstone project aims to predict CO2 emissions for any location based on geographical coordinates (latitude and longitude) and population data. The increasing global CO2 emissions due to human activities such as deforestation and fossil fuel consumption have motivated the hypothesis that a relationship exists between population metrics and CO2 emissions.
 
