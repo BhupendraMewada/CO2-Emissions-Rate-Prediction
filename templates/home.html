@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .result h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .result h3 {
+            font-size: 22px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CO2 Emission Prediction</h1>
+    </header>
+
+    <form method="POST">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required><br>
+
+        <label for="population_density">Population Density:</label>
+        <input type="text" id="population_density" name="population_density" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if predicted_value is not none %}
+        <div class="result">
+            <h2>Predicted CO2 Emission Log: {{ predicted_value }}</h2>
+            <h3>Predicted CO2 Emission Rate: {{ (10 ** predicted_value) | round(2) }} metric tons per year</h3>
+        </div>
+    {% endif %}
+
+    <footer>
+        <p>CO2 Emission Prediction &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
